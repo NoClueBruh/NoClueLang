@@ -1,0 +1,122 @@
+int counter = 1000;
+
+while counter > 0 do 
+	float out_;
+	
+	if counter % 2 == 0 do
+		out_ = counter / 1;
+	elseif counter % 3 == 0 do 
+		if counter > 10 do 
+			out_ = counter / 100;
+		else 
+			out_ = counter / 10;
+		end
+	end
+	
+	counter = counter - 1;
+end
+
+-----------------------------------------------------------------------------------------------
+
+~ random script showcasing some of the features ~
+~ these are also comments ~ 
+
+function string getNums(int to)
+	string arrayKey = Array::inew();
+	
+	int i = 0;
+	while i < to do
+		Array::ipush(arrayKey, i);
+		i = i + 1;
+	end
+	
+	return arrayKey;
+end
+
+string out_;
+
+int i = 0;
+int j = 2;
+
+while j >= 0 do  
+	string resultKey = getNums(10 + j * 5);
+
+	int size = Array::len(resultKey); 
+	while i < size do
+		out_ = '*     ' + Array::iget(resultKey, i);
+		i = i + 1;
+	end 
+	
+	i = 0;
+	j = j - 1;
+	
+	out_ = '-----------';
+end
+
+------------------------------------------------------------------------------------------------------
+
+string string_array = Array::snew();
+
+Array::spush(string_array, 'one', 0);
+Array::spush(string_array, 'two', 1);
+Array::spush(string_array, 'three', 2);
+Array::spush(string_array, 'four', 3);
+	
+Array::splice(string_array, 1, 2);
+
+int i = 0;
+int len = Array::len(string_array);
+
+string out_;
+
+while i < len do
+	out_ = Array::sget(string_array, i);
+	
+	i = i + 1;
+end
+
+-----------------------------------------------------------------------------
+
+string string_array = Array::snew();
+
+Array::spush(string_array, 'one', 0);
+Array::spush(string_array, 'two', 1);
+Array::spush(string_array, 'three', 2);
+Array::spush(string_array, 'four', 3);
+	
+Array::splice(string_array, 1, 1);
+
+IO::println(String::charAt('what', 1));
+IO::println(String::charAt('what', 0));
+
+int i = 0;
+int len = Array::len(string_array);
+ 
+while i < len do
+	string val = Array::sget(string_array, i);
+	IO::println('*Value at index ' + i + ' is equal to ' + val + ' (' + String::len(val) + ' char(s) long)');
+	
+	i = i + 1;
+end
+
+-----------------------------------------------------------------------------
+string array = Array::snew(); 
+
+function string read() 
+	IO::print('note: ');
+	return IO::readLine();
+end
+
+string input = read();
+
+while 1 - String::equals(input, 'end') do 
+	Array::spush(array, input); 
+	input = read();
+end
+
+int i = 0; 
+int j = Array::len(array);
+while i < j do 
+	IO::println('* ' + Array::sget(array, i));
+	i = i + 1;
+end

@@ -1,0 +1,58 @@
+NoClueLang by NoClueBruh!
+
+<< HEAR ME OUT >>
+  - This shi was made in a little less than 10 days so don't expect any revolutionary features
+  - The source code is quite the italian spaghetti, clean up at your own risk
+  - The language does have errors but they are lacking some info such as line number ( possible next update )
+  - You may make your own version of this language if you will, just make sure to 
+    leave some credit and keep the original project's name with some twist ( Such as NoClueLang++ or somethin )
+
+<< ABOUT THE LANGUAGE >>
+  - Check the documentation of the language before use!
+    ( Due to the uselessness of errors )
+  - If you have any serious questions, you'll find me at noclueguy0@gmail.com
+
+HAVE FUN!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nocluebruh not responsible for any harm caused by the use of noClueLang or it's source code
