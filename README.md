@@ -219,7 +219,7 @@ IO::readLine() -> string
   - reads user input ( 300 character limit because why not )
 
 IO::readChar() -> string
-  - reads a single character from the user ( doesn't require the user to hit enter )
+  - reads a single character from the user ( doesn't require the user to hit enter if you're using windows )
 ```
 
 ### Sys Collection
@@ -243,7 +243,7 @@ Expressions in NoClueLang have the following available operators
 
 **You can also cast expressions!**
 
-(_sort of_)
+( _sort of_ )
 - You can cast any expression to a string expression by adding the 'string' keyword at the start like this
 ```
 string idk = string (2 + 1);
