@@ -122,7 +122,7 @@ Array::remove(<arrayID>, <index>)
   - removes the element at <index> of the given array
 
 Array::splice(<arrayID>, <index>, <n>)
-  - removes <n>th elements starting from <index> of the given array
+  - removes <n> elements starting from <index> of the given array
 
 Array::alloc(<arrayID>, <len>)
   - resizes (if needed) the given array to store <len> elements
