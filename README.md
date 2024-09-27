@@ -153,7 +153,7 @@ Array::sget(<arrayID>, <index>) -> string
 ## Other collections and their functions
 > Keep in mind that you can easily add your own functions and collections through the source code!
 
-### Math
+### Math Collection
 ```
 Math::getE()  -> float
   - returns that cool constant everyone keeps talkin about
@@ -189,7 +189,7 @@ Math::floor(<floatValue>) -> int
   - returns the largest int less or equal to <floatValue> 
 ```
 
-### String
+### String Collection
 ```
 String::equals(<stringA>, <stringB>) -> int
   - returns 1 if the strings match or 0 if they don't!
@@ -207,7 +207,7 @@ String::charCodeAt(<stringValue>, <index>) -> int
   - returns the character code from <stringValue> at <index>
 ```
 
-### IO
+### IO Collection
 ```
 IO::print(<message>)
   - prints <message> to the console
@@ -222,7 +222,7 @@ IO::readChar() -> string
   - reads a single character from the user ( doesn't require the user to hit enter )
 ```
 
-### Sys
+### Sys Collection
 ```
 Sys::toInt(<stringValue>) -> int
   - returns the int represented by <stringValue>
