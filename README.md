@@ -3,7 +3,9 @@
 
 > This language was made without the use of any tutorial or any research at all.
 > 
-> And it really shows, just take a look at the source code 
+> And it really shows, just take a look at the source code
+
+<sup> NoClueBruh not responsible for any harm caused </sup>
 
 # Types 
 There are 3 types supported by NoClueLang and they are the following;
@@ -185,4 +187,46 @@ Math::ceil(<floatValue>) -> int
 
 Math::floor(<floatValue>) -> int
   - returns the largest int less or equal to <floatValue> 
+```
+
+### String
+```
+String::equals(<stringA>, <stringB>) -> int
+  - returns 1 if the strings match or 0 if they don't!
+
+String::len(<stringValue>) -> Int
+  - returns the length of <stringValue>
+
+String::splice(<stringValue>, <index>, <len>)
+  - removes <len> characters from <stringValue> starting at <index>
+
+String::charAt(<stringValue>, <index>) -> string
+  - returns the character from <stringValue> at <index>
+
+String::charCodeAt(<stringValue>, <index>) -> int
+  - returns the character code from <stringValue> at <index>
+```
+
+### IO
+```
+IO::print(<message>)
+  - prints <message> to the console
+
+IO::println(<message>)
+  - prints <message> with a new line to the console
+
+IO::readLine() -> string
+  - reads user input ( 300 character limit because why not )
+
+IO::readChar() -> string
+  - reads a single character from the user ( doesn't require the user to hit enter )
+```
+
+### Sys
+```
+Sys::toInt(<stringValue>) -> int
+  - returns the int represented by <stringValue>
+
+Sys::toFloat(<stringValue>) -> float
+  - returns the float represented by <stringValue>
 ```
