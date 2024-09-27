@@ -241,6 +241,14 @@ Expressions in NoClueLang have the following available operators
 >
 > Instead, you can do 1 - int!
 
+## Editor
+Use whatever editor you want but I made a cool little language setup for Notepad++!
+
+The language file is inside the 'other' folder!
+Take a look at it:>
+![image](https://github.com/user-attachments/assets/a8458c4a-cc56-485c-950e-bb64641905cf)
+_not sure if thats the best solution for the FizzBuzz thingie_
+
 ## How to interp a file!
 - *First step* : Compile the project with your gcc and whatnot
 - *Second step*: Run it with an argument that is the location of the file you wish to interp
