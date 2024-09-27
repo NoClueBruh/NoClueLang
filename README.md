@@ -2,7 +2,8 @@
 **Most stuff in NoClueLang work a little different compared to other languages (that actually good)!**
 
 > This language was made without the use of any tutorial or any research at all.
-> And it really shows, just take a look at the source code 🍝
+> 
+> And it really shows, just take a look at the source code 
 
 # Types 
 There are 3 types supported by NoClueLang and they are the following;
