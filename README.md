@@ -4,6 +4,11 @@
 > This language was made without the use of any tutorial or any research at all.
 > 
 > And it really shows, just take a look at the source code
+>
+
+> This was also made in less than 10 days
+> 
+> ( _free time due to wisdom tooth removal🦷_ )
 
 <sup> NoClueBruh not responsible for any harm caused </sup>
 
