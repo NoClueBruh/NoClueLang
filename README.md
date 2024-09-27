@@ -12,10 +12,11 @@ There are 3 types supported by NoClueLang and they are the following;
 - _int_
 - _float_
 - _string_
-  
-Yep, there aren't any booleans because I was lazy!
-
-more on that later!!!
+ 
+> [!IMPORTANT]
+> Yep, there aren't any booleans because I was lazy!
+>
+>  more on that later!!!
 
 # Variables
 Variables in NoClueLang can be defined as so
@@ -36,9 +37,10 @@ x = 1;
 x = -x;
 ...
 ```
-Keep in mind that you can only assign values to variables that way!
-
-That means no +=, -=, *=, ++ etc
+> [!WARNING]
+> Keep in mind that you can only assign values to variables that way!
+>
+> That means no +=, -=, *=, ++ etc
 
 And of course, assigning values of different types will result in an error!
 
@@ -85,13 +87,14 @@ while x < 4 do
 end
 ```
 
-You can at any point break out of a while loop using the 'break' keyword!
-
-_( no 'continue' feature because I was lazy )_
+You can at any point break out of a while loop using the 'break' keyword! 
 
 ```
 break;
 ```
+
+> [!WARNING]
+> I was too lazy to add the continue thing
 
 > In NoClueLang, there aren't any 'for' or 'do while' and whatnot.
 # Collections
@@ -105,7 +108,8 @@ string c = String::charAt('Hello, World', 0);
 
 _*list of all collections and their functions later._
 # Arrays
-**In NoClueLang, Arrays don't exist!**
+> [!CAUTION]
+> **In NoClueLang, Array types don't exist!**
 
 You can instead simulate an array like this
 ```
@@ -252,11 +256,11 @@ string idk = string (2 + 1);
 ```
 float num = float 2;
 ```
-
-**You can only cast expressions to certain types**
-
-- If you want to cast a float expression to a int expression, you'll need to use Math::floor, Math::Ceil or Math::round
-- Casting a string expression to a int or float expression won't make any difference
+> [!IMPORTANT]
+>**You can only cast expressions to certain types**
+>
+>- If you want to cast a float expression to a int expression, you'll need to use Math::floor, Math::Ceil or Math::round
+>- Casting a string expression to a int or float expression won't make any difference
 
 
 ## Editor
