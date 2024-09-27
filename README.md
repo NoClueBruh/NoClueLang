@@ -239,4 +239,9 @@ Expressions in NoClueLang have the following available operators
 
 > In NoClueLang, there doesn't exist a 'not' operator ( that '!' that flips booleans )
 >
-> Instead, you can do 1 - int! 
+> Instead, you can do 1 - int!
+
+## How to interp a file!
+- *First step* : Compile the project with your gcc and whatnot
+- *Second step*: Run it with an argument that is the location of the file you wish to interp
+- *Third step* : yeah thats it
