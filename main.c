@@ -2,8 +2,12 @@
 #include<stdlib.h> 
 #include<string.h>
 #include<ctype.h>
-#include<conio.h> 
 #include<math.h>
+
+#ifdef _WIN32
+	#include<conio.h> 
+#endif
+
 
 char equal(char* a, char* b) {
 	return strcmp(a, b) == 0;
@@ -87,7 +91,7 @@ int main (int argc, char *argv[]) {
 		printf("Invalid use of NoClueLang interpreter!\n"); 
 		exit(1);
 	}
-
+	 
 	struct Str* fileContent = readFile(argv[1]);
 	if(fileContent == NULL) {
 		printf("File '%s' doesn't exist!\n", argv[1]); 
