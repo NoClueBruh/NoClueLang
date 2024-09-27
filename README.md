@@ -239,7 +239,8 @@ Sys::toFloat(<stringValue>) -> float
 ## Expressions
 Expressions in NoClueLang have the following available operators
 - *Basic operators*:    '+',  '-',  '*',  '/',  '^',  '%'
-- *Compare operators*:  '>',  '>=',  '==',  '!=',  '<=',  '<'
+- *Comparison operators*:  '>',  '>=',  '==',  '!=',  '<=',  '<'
+- *Logical operators*: '&&', '||'
 
 > In NoClueLang, there doesn't exist a 'not' operator ( that '!' that flips booleans )
 >
