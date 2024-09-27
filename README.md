@@ -146,3 +146,40 @@ Array::sget(<arrayID>, <index>) -> string
 ```
 > These are all the functions inside the 'Array' collection!
 ## Other collections and their functions
+> Keep in mind that you can easily add your own functions and collections through the source code!
+
+### Math
+```
+Math::getE()  -> float
+  - returns that cool constant everyone keeps talkin about
+
+Math::getPI() -> float
+  - returns that really cool constant everyone and their mom keep talkin about
+
+Math::abs(<floatValue>) -> float
+  - returns the absolute value of <floatValue>
+
+Math::sin(<floatValue>) -> float
+  - returns the sine of the angle <floatValue> rad
+
+Math::cos(<floatValue>) -> float
+  - returns the cosine of the angle <floatValue> rad
+
+Math::tan(<floatValue>) -> float
+  - returns the tangent of the angle <floatValue> rad
+
+Math::max(<floatValue0>, <floatValue1>) -> float
+  - returns the largest float given
+
+Math::min(<floatValue0>, <floatValue1>) -> float
+  - returns the smallest float given
+
+Math::round(<floatValue>) -> int
+  - returns <floatValue> rounded to a int
+
+Math::ceil(<floatValue>) -> int
+  - returns the smallest int greater or equal to <floatValue> 
+
+Math::floor(<floatValue>) -> int
+  - returns the largest int less or equal to <floatValue> 
+```
