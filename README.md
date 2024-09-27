@@ -241,6 +241,24 @@ Expressions in NoClueLang have the following available operators
 >
 > Instead, you can do 1 - int!
 
+**You can also cast expressions!**
+
+(_sort of_)
+- You can cast any expression to a string expression by adding the 'string' keyword at the start like this
+```
+string idk = string (2 + 1);
+```
+- You can also case a int expression to a float expression the same way
+```
+float num = float 2;
+```
+
+**You can only cast expressions to certain types**
+
+- If you want to cast a float expression to a int expression, you'll need to use Math::floor, Math::Ceil or Math::round
+- Casting a string expression to a int or float expression won't make any difference
+
+
 ## Editor
 Use whatever editor you want but I made a cool little language setup for Notepad++!
 
