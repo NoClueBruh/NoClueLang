@@ -95,7 +95,7 @@ void string_charAt(struct NativeFunction* thisFunc) {
 	int index = thisFunc->params[1]->data.ival; 
 	
 	if(index < 0 || index > str->len - 1) {
-		printf("\n[ String::splice ] character index out of bounds!\n");
+		printf("\n[ String::charAt ] character index out of bounds!\n");
 		return;
 	}
 	
@@ -107,7 +107,7 @@ void string_charCodeAt(struct NativeFunction* thisFunc) {
 	int index = thisFunc->params[1]->data.ival; 
 	
 	if(index < 0 || index > str->len - 1) {
-		printf("\n[ String::splice ] character index out of bounds!\n");
+		printf("\n[ String::charCodeAt ] character index out of bounds!\n");
 		return;
 	}
 	
@@ -136,7 +136,13 @@ void io_readLine(struct NativeFunction* thisFunc) {
 }
 
 void io_readChar(struct NativeFunction* thisFunc) {    
-	str_pushChar(thisFunc->result->data.sval, _getch());
+	#ifdef _WIN32
+		str_pushChar(thisFunc->result->data.sval, _getch());
+		return;
+	#endif
+	
+	str_pushChar(thisFunc->result->data.sval, getchar());
+	getchar();
 }
 
 // *Sys
