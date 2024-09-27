@@ -237,6 +237,6 @@ Expressions in NoClueLang have the following available operators
 - *Basic operators*:    '+',  '-',  '*',  '/',  '^',  '%'
 - *Compare operators*:  '>',  '>=',  '==',  '!=',  '<=',  '<'
 
-> In NoClueLang, there doesn't the 'not' operator ( that '!' that flips booleans )
+> In NoClueLang, there doesn't exist a 'not' operator ( that '!' that flips booleans )
 >
 > Instead, you can do 1 - int! 
