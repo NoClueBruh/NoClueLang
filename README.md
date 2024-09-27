@@ -230,3 +230,13 @@ Sys::toInt(<stringValue>) -> int
 Sys::toFloat(<stringValue>) -> float
   - returns the float represented by <stringValue>
 ```
+
+# Other information and how to interp a file
+## Expressions
+Expressions in NoClueLang have the following available operators
+- *Basic operators*:  '+', '-', '*', '/', '^', '%'
+- *Compare operators*: '>', '>=', '==', '!=', '<=', '<'
+
+> In NoClueLang, there doesn't the 'not' operator ( that '!' that flips booleans )
+>
+> Instead, you can do 1 - int! 
