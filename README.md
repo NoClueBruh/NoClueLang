@@ -1,5 +1,5 @@
 ### NoClueLang by NoClueBruh
-**Most stuff in NoClueLang work a little different compared to other languages (that actually good)!**
+**Most stuff in NoClueLang work a little different compared to other languages (that are actually good)!**
 
 > This language was made without the use of any tutorial or any research at all.
 > 
