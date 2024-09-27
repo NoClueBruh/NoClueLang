@@ -253,7 +253,7 @@ Expressions in NoClueLang have the following available operators
 ```
 string idk = string (2 + 1);
 ```
-- You can also case a int expression to a float expression the same way
+- You can also cast a int expression to a float expression the same way
 ```
 float num = float 2;
 ```
