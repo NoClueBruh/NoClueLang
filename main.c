@@ -74,12 +74,13 @@ struct Str* readFile(char *path) {
         fread(&c, 1, 1, f);
         if(feof(f)) break;
  
-		if(c == '\n') {
-            str_pushChar(buffer, ' ');
-		}
-        else if(c>31) {
+	if(c > 31) {
             str_pushChar(buffer, c);
         }
+	else { 
+		// unknown or useless characters are spaces now:)
+		str_pushChar(buffer, ' ');
+	}
     }
     fclose(f);
 
