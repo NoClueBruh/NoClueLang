@@ -51,15 +51,15 @@ void math_max(struct NativeFunction* func) {
 }
 
 void math_round(struct NativeFunction* func) {
-	func->result->data.fval = round(func->params[0]->data.fval);
+	func->result->data.ival = round(func->params[0]->data.fval);
 }
 
 void math_ceil(struct NativeFunction* func) {
-	func->result->data.fval = ceil(func->params[0]->data.fval);
+	func->result->data.ival = ceil(func->params[0]->data.fval);
 }
 
 void math_floor(struct NativeFunction* func) {
-	func->result->data.fval = floor(func->params[0]->data.fval);
+	func->result->data.ival = floor(func->params[0]->data.fval);
 }
 
 // *STRING 
@@ -732,9 +732,9 @@ void native_define() {
 	struct NativeFunction* math_tan_f = nativeFunction_new(&math_tan, "tan", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Float);
 	struct NativeFunction* math_min_f = nativeFunction_new(&math_min, "min", 2, (enum VarType[2]) {TYPE_Float, TYPE_Float}, TYPE_Float);
 	struct NativeFunction* math_max_f = nativeFunction_new(&math_max, "max", 2, (enum VarType[2]) {TYPE_Float, TYPE_Float}, TYPE_Float);
-	struct NativeFunction* math_floor_f = nativeFunction_new(&math_floor, "floor", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Float);
-	struct NativeFunction* math_ceil_f = nativeFunction_new(&math_ceil, "ceil", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Float);
-	struct NativeFunction* math_round_f = nativeFunction_new(&math_round, "round", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Float);
+	struct NativeFunction* math_floor_f = nativeFunction_new(&math_floor, "floor", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Int);
+	struct NativeFunction* math_ceil_f = nativeFunction_new(&math_ceil, "ceil", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Int);
+	struct NativeFunction* math_round_f = nativeFunction_new(&math_round, "round", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Int);
 	
 	struct NativeFunction* string_equals_f = nativeFunction_new(&string_equals, "equals", 2, (enum VarType[2]) {TYPE_String, TYPE_String}, TYPE_Int);
 	struct NativeFunction* string_len_f = nativeFunction_new(&string_len, "len", 1, (enum VarType[1]) {TYPE_String}, TYPE_Int);
