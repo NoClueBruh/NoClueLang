@@ -170,6 +170,12 @@ Math::getE()  -> float
 Math::getPI() -> float
   - returns that really cool constant everyone and their mom keep talkin about
 
+Math::ln(<floatValue>) -> float
+  - returns the natural log of some number
+
+Math::log(<floatValue>) -> float
+  - returns the log10 of some number
+
 Math::abs(<floatValue>) -> float
   - returns the absolute value of <floatValue>
 
