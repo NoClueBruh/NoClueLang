@@ -170,6 +170,9 @@ Math::getE()  -> float
 Math::getPI() -> float
   - returns that really cool constant everyone and their mom keep talkin about
 
+Math::isNan(<floatValue>) -> int
+  - returns if the given float (?) is not a number
+
 Math::ln(<floatValue>) -> float
   - returns the natural log of some number
 
