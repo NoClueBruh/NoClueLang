@@ -34,6 +34,10 @@ void math_log(struct NativeFunction* func) {
 	func->result->data.fval = log10(func->params[0]->data.fval);
 } 
 
+void math_isNan(struct NativeFunction* func) {
+	func->result->data.ival = isnan(func->params[0]->data.fval);
+}
+
 void math_cos(struct NativeFunction* func) {
 	func->result->data.fval = cos(func->params[0]->data.fval);
 }
@@ -741,6 +745,7 @@ void native_define() {
 	struct NativeFunction* math_round_f = nativeFunction_new(&math_round, "round", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Int);
 	struct NativeFunction* math_log_f = nativeFunction_new(&math_log, "log", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Float);
 	struct NativeFunction* math_ln_f = nativeFunction_new(&math_ln, "ln", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Float);
+	struct NativeFunction* math_isNan_f = nativeFunction_new(&math_isNan, "isNan", 1, (enum VarType[1]) {TYPE_Float}, TYPE_Int);
 	
 	struct NativeFunction* string_equals_f = nativeFunction_new(&string_equals, "equals", 2, (enum VarType[2]) {TYPE_String, TYPE_String}, TYPE_Int);
 	struct NativeFunction* string_len_f = nativeFunction_new(&string_len, "len", 1, (enum VarType[1]) {TYPE_String}, TYPE_Int);
@@ -780,7 +785,7 @@ void native_define() {
 	struct NativeFunction* sys_toInt_f = nativeFunction_new(&sys_toInt, "toInt", 1, (enum VarType[1]) {TYPE_String}, TYPE_Int);
 	struct NativeFunction* sys_toFloat_f = nativeFunction_new(&sys_toFloat, "toFloat", 1, (enum VarType[1]) {TYPE_String}, TYPE_Float);
 	 
-	collections[0] = nfc_new("Math", (struct NativeFunction*[13]) {
+	collections[0] = nfc_new("Math", (struct NativeFunction*[14]) {
 		math_getE_f, 
 		math_getPI_f,
 		math_abs_f,
@@ -793,8 +798,9 @@ void native_define() {
 		math_ceil_f,
 		math_floor_f,
 		math_log_f,
-		math_ln_f
-	}, 13);
+		math_ln_f,
+		math_isNan_f
+	}, 14);
 
 	collections[1] = nfc_new("String", (struct NativeFunction*[5]) {
 		string_equals_f,
