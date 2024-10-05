@@ -25,7 +25,7 @@
             <Keywords name="Folders in comment, middle"></Keywords>
             <Keywords name="Folders in comment, close"></Keywords>
             <Keywords name="Keywords1">Array IO Sys Math String</Keywords>
-            <Keywords name="Keywords2">getPI getE abs cos sin tan min max floor ceil round equals len splice charAt charCodeAt inew ipush iinsert iget iset fnew fpush finsert fget fset snew spush sinsert sget sset len type remove splice alloc print println readLine readChar toInt toFloat</Keywords>
+            <Keywords name="Keywords2">getPI getE abs cos sin tan min max floor ceil round equals len splice charAt charCodeAt inew ipush iinsert iget iset fnew fpush finsert fget fset snew spush sinsert sget sset len type remove splice alloc print println readLine readChar toInt toFloat ln log</Keywords>
             <Keywords name="Keywords3">string float int void</Keywords>
             <Keywords name="Keywords4"></Keywords>
             <Keywords name="Keywords5">while if end function do elseif else</Keywords>
