@@ -29,10 +29,10 @@ Variables in NoClueLang can be defined as so
 int x = 0;
 int x1;
 
-float y = 0;
+float y = 0.4;
 float y1;
 
-string z = 0;
+string z = 'hello';
 string z1;
 ```
 
