@@ -195,7 +195,7 @@ struct NativeArray* array_getFromCode(struct Str* key) {
 	}
 	
 	size_t index = array_decodeKey(key);
-	if(index > arrays->arrayCount - 1) { 
+	if(arrays->arrayCount == 0 || index > arrays->arrayCount - 1) { 
 		return NULL;
 	}
 	
@@ -340,8 +340,7 @@ void array_ipush(struct NativeFunction* func) {
 	}
 	
 	size_t index = array_decodeKey(key);
-
-	if(index > intArrays.arrayCount - 1) {
+	if(intArrays.arrayCount == 0 || index > intArrays.arrayCount - 1) {
 		printf("\n[ Array::ipush ] That array doesn't exist!\n");
 		return;
 	}
@@ -365,7 +364,7 @@ void array_iinsert(struct NativeFunction* func) {
 	
 	size_t index = array_decodeKey(key);
 
-	if(index > intArrays.arrayCount - 1) {
+	if(intArrays.arrayCount == 0 || index > intArrays.arrayCount - 1) {
 		printf("\n[ Array::iinsert ] That array doesn't exist!\n");
 		return;
 	}
@@ -397,11 +396,12 @@ void array_iget(struct NativeFunction* func) {
 	}
 	
 	size_t index = array_decodeKey(key); 
-	if(index > intArrays.arrayCount - 1) {
-		printf("\n[ Array::iget ] That array doesn't exist!\n"); 
+ 
+	if(intArrays.arrayCount == 0 || index > intArrays.arrayCount - 1) {
+		printf("\n [ Array::iget ] That array doesn't exist!\n");  
 		return;
-	}
-	 
+	} 
+	
 	struct NativeArray arr = intArrays.arrays[index];
 	if(i > arr.count - 1) {
 		printf("\n[ Array::iget ] Array index out of bounds!\n"); 
@@ -432,7 +432,7 @@ void array_iset(struct NativeFunction* func) {
 	}
 	
 	size_t index = array_decodeKey(key); 
-	if(index > intArrays.arrayCount - 1) {
+	if(intArrays.arrayCount == 0 || index > intArrays.arrayCount - 1) {
 		printf("\n[ Array::iset ] That array doesn't exist!\n"); 
 		return;
 	}
@@ -479,8 +479,7 @@ void array_fpush(struct NativeFunction* func) {
 	}
 	
 	size_t index = array_decodeKey(key);
-
-	if(index > floatArrays.arrayCount) {
+	if(floatArrays.arrayCount == 0 || index > floatArrays.arrayCount - 1) {
 		printf("\n[ Array::fpush ] That array doesn't exist!\n");
 		return;
 	}  
@@ -504,7 +503,7 @@ void array_finsert(struct NativeFunction* func) {
 	
 	size_t index = array_decodeKey(key);
 
-	if(index > floatArrays.arrayCount) {
+	if(floatArrays.arrayCount == 0 || index > floatArrays.arrayCount - 1) {
 		printf("\n[ Array::finsert ] That array doesn't exist!\n");
 		return;
 	} 
@@ -536,7 +535,7 @@ void array_fget(struct NativeFunction* func) {
 	} 
 	
 	size_t index = array_decodeKey(key); 
-	if(index > floatArrays.arrayCount - 1) {
+	if( floatArrays.arrayCount  == 0 || index > floatArrays.arrayCount - 1) {
 		printf("\n[ Array::fget ] That array doesn't exist!\n"); 
 		return;
 	}
@@ -571,7 +570,7 @@ void array_fset(struct NativeFunction* func) {
 	} 
 	
 	size_t index = array_decodeKey(key); 
-	if(index > floatArrays.arrayCount - 1) {
+	if( floatArrays.arrayCount == 0 || index > floatArrays.arrayCount - 1) {
 		printf("\n[ Array::fset ] That array doesn't exist!\n"); 
 		return;
 	}
@@ -620,7 +619,7 @@ void array_spush(struct NativeFunction* func) {
 	
 	size_t index = array_decodeKey(key);
 
-	if(index > stringArrays.arrayCount - 1) {
+	if(stringArrays.arrayCount == 0 || index > stringArrays.arrayCount - 1) {
 		printf("\n[ Array::spush ] That array doesn't exist!\n");
 		return;
 	} 
@@ -644,7 +643,7 @@ void array_sinsert(struct NativeFunction* func) {
 	
 	size_t index = array_decodeKey(key);
 
-	if(index > stringArrays.arrayCount - 1) {
+	if(stringArrays.arrayCount == 0 || index > stringArrays.arrayCount - 1) {
 		printf("\n[ Array::spush ] That array doesn't exist!\n");
 		return;
 	}
@@ -676,7 +675,7 @@ void array_sget(struct NativeFunction* func) {
 	}
 	
 	size_t index = array_decodeKey(key); 
-	if(index > stringArrays.arrayCount - 1) {
+	if(stringArrays.arrayCount == 0 || index > stringArrays.arrayCount - 1) {
 		printf("\n[ Array::sget ] That array doesn't exist!\n"); 
 		return;
 	}
@@ -711,7 +710,7 @@ void array_sset(struct NativeFunction* func) {
 	}
 	
 	size_t index = array_decodeKey(key); 
-	if(index > stringArrays.arrayCount - 1) {
+	if(stringArrays.arrayCount == 0 || index > stringArrays.arrayCount - 1) {
 		printf("\n[ Array::sset ] That array doesn't exist!\n"); 
 		return;
 	}
@@ -845,6 +844,16 @@ void native_define() {
 		sys_toInt_f,
 		sys_toFloat_f
 	}, 2);
+} 
+
+void native_empty() {  
+	nativeArrays_free(&intArrays, 0);
+	nativeArrays_free(&floatArrays, 0);
+	nativeArrays_free(&stringArrays, 1);    
+
+	nativeArrays_make(&intArrays);
+	nativeArrays_make(&floatArrays);
+	nativeArrays_make(&stringArrays); 
 }
 
 void native_free() {  
