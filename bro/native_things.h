@@ -398,7 +398,7 @@ void array_iget(struct NativeFunction* func) {
 	size_t index = array_decodeKey(key); 
  
 	if(intArrays.arrayCount == 0 || index > intArrays.arrayCount - 1) {
-		printf("\n [ Array::iget ] That array doesn't exist!\n");  
+		printf("\n[ Array::iget ] That array doesn't exist!\n");  
 		return;
 	} 
 	
