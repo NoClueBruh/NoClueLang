@@ -159,6 +159,15 @@ struct Scan* scan_new(char* str) {
 				}
 			}
 		}
+		else {
+			// if we hit a weird token 
+			// add the previous valid ones 
+			// and ignore this one
+			if(currentMatch->len > 0) {
+				scan_tokenListPushToken(scan, currentMatch, type, 0);
+				type = INT;
+			}
+		}
 		i++;
 	}		
 	
