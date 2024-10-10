@@ -15,7 +15,7 @@ struct Variable* variable_new(char* name, enum VarType type) {
 // Set variable's value
 void variable_setValue(struct Variable* var, struct VarValue* val) {  
 	if(varValue_assign(var->value, val)) { 
-		printf("\n[ RUNTIME ERROR ] variable '%s' if of type %s!\n", var->name, ofType(var->value->type));
+		printf("\n[ RUNTIME ERROR ] variable '%s' is of type %s!\n", var->name, ofType(var->value->type));
 		exit(1);
 	}
 }
